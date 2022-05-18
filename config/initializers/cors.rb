@@ -24,5 +24,11 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
     resource '/projects',
       headers: :any,
       methods: [:get, :post, :put, :patch, :delete, :options, :head]
+    resource '/tests',
+      headers: :any,
+      methods: [:get, :post, :options, :head]
+    resource '/tests/:id',
+      headers: :any,
+      methods: [:get, :patch, :delete, :options, :head]
   end
 end
